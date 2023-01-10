@@ -14,7 +14,8 @@
 .signup{
     width: 26%;
     /* max-width: 26%; */
-    min-height: 730px;
+    height: 700px;
+    min-height: 600px;
     max-height: 760px;
     background: rgb(246, 246, 246);
     border: 1px solid rgb(179, 179, 179);
@@ -87,3 +88,65 @@ color: #4DB5F9;
 .signup .para4 span:hover{
     cursor: pointer;
     }
+
+
+    @media (min-width: 1000px) and  (max-width: 1250px) {
+    
+
+      .signup{
+        width: 35%;
+        height: 680px ;
+      }
+     }
+
+     @media (min-width: 750px) and  (max-width: 1000px) {
+    
+
+        .signup{
+          width: 45%;
+          height: 670px;
+        }
+       }
+
+       @media (min-width: 500px) and  (max-width: 750px) {
+          
+        
+
+        .signup{
+        
+          width: 60%;
+          height: 650px;
+        }
+
+        .para2{
+            font-size: xx-small;
+        }
+       }
+
+       @media (min-width:300px) and  (max-width: 500px) {
+        
+        .signup{
+          width: 80%;
+          height: 600px;
+        }
+       }
+
+       @media  (max-width: 300px) {
+        
+
+        *{
+            overflow: hidden;
+        }
+        .signup{
+          width: 90%;
+          height: 550px;
+        }
+
+        .para1{
+            font-size: xx-small;
+        }
+
+        .para2{
+            font-size: 8px;
+        }
+       }

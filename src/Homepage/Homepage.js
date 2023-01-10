@@ -6,11 +6,14 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import { db,auth } from '../Firebase'
 import {collection,getDocs} from 'firebase/firestore'
 import { signOut } from 'firebase/auth';
+import { useNavigate } from 'react-router';
 
 const Homepage = () => {
 
       
     const [posts,setPosts] = useState([]);
+
+    const navigate= useNavigate();
 
     useEffect(()=>{
 
@@ -34,7 +37,7 @@ const Homepage = () => {
         <div className='homepage'>
             <div className='sidebar_container'>
                 <div className='sidebar_top'>
-                    <img className='sidebar_logo' src={logo} alt='logo' />
+                    <img className='sidebar_logo' src={logo} alt='logo' onClick={()=>navigate('/dashboard')} />
                 </div>
                 <div className='sidebar'>
                     <p className='para'>Home</p>
