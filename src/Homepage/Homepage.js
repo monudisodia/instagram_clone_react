@@ -11,27 +11,67 @@ import { useNavigate } from 'react-router';
 const Homepage = () => {
 
       
-    const [posts,setPosts] = useState([]);
+    const [posts,setPosts] = useState([{
+        caption:"this is the way",
+        imgURL:"https://images2.alphacoders.com/130/1301855.jpg",
+        username:"monu"
+    },
+    {
+        caption:"hey there",
+        imgURL:"https://images5.alphacoders.com/130/1306265.jpg",
+        username:"mando"
+    },
+    {
+        caption:"hello ",
+        imgURL:"https://images5.alphacoders.com/130/1302520.jpg",
+        username:"ashish"
+    },
+    {
+        caption:"this is the way",
+        imgURL:"https://images.alphacoders.com/105/1050036.jpg",
+        username:"mandalorian"
+    },
+    {
+        caption:"hi everyone",
+        imgURL:"https://images8.alphacoders.com/130/1303971.png",
+        username:"kunal"
+    },
+    {
+        caption:"this is the way",
+        imgURL:"https://images.alphacoders.com/105/1050036.jpg",
+        username:"mandalorian"
+    },
+    {
+        caption:"lots off love",
+        imgURL:"https://images7.alphacoders.com/130/1305785.jpg",
+        username:"naturelove"
+    },
+    {
+        caption:"super bros",
+        imgURL:"https://mfiles.alphacoders.com/991/991269.jpg",
+        username:"mario"
+    }
+     ]);
 
     const navigate= useNavigate();
 
-    useEffect(()=>{
+    // useEffect(()=>{
 
-        const callRef= collection(db,'posts');
+    //     const callRef= collection(db,'posts');
 
-       getDocs(callRef).then((snapshot)=>{
-        let temp=[];
-        snapshot.docs.forEach((doc)=>{
-            temp.push({
-                id: doc.id,
-                ...doc.data()
+    //    getDocs(callRef).then((snapshot)=>{
+    //     let temp=[];
+    //     snapshot.docs.forEach((doc)=>{
+    //         temp.push({
+    //             id: doc.id,
+    //             ...doc.data()
                 
-            })
-        });
+    //         })
+    //     });
           
-        setPosts(temp);
-       });
-    },[]);
+    //     setPosts(temp);
+    //    });
+    // },[]);
 
     return (
         <div className='homepage'>
